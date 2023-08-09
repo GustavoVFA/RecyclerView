@@ -21,6 +21,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private List<filmes> lstFilmes;
 
+    public MyAdapter(Context applicationContext, List<filmes> filmesList) {
+
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,16 +42,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+        holder.idTituloFilmes.setText(lstFilmes.get(position).getTitulo());
+        holder.idImagemFilme.setImageResource(lstFilmes.get(position).getImagem());
+
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lstFilmes.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView idTituloFilme;
+        TextView idTituloFilmes;
 
         ImageView idImagemFilme;
 
@@ -56,7 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            idTituloFilme = itemView.findViewById(R.id.idTituloFilmes);
+            idTituloFilmes = itemView.findViewById(R.id.idTituloFilmes);
             idImagemFilme = itemView.findViewById(R.id.idImgFilmes);
             idCardView = itemView.findViewById(R.id.idCardFilmes);
         }

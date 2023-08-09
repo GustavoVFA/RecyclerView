@@ -2,43 +2,53 @@ package br.com.etecia.myapp;
 
 public class filmes {
 
-    private String nome;
+    private String Titulo;
 
-    private int idade;
+    private int Imagem;
 
-    private String raca;
+    private String Descricao;
 
-    public filmes() {
+    private String Categoria;
+
+
+    public String getTitulo() {
+        return Titulo;
     }
 
-    public filmes(String nome, int idade, String raca) {
-        this.nome = nome;
-        this.idade = idade;
-        this.raca = raca;
+    public void setTitulo(String titulo) {
+        Titulo = titulo;
     }
 
-    public String getNome() {
-        return nome;
+    public int getImagem() {
+        return Imagem;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setImagem(int imagem) {
+        Imagem = imagem;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getDescricao() {
+        return Descricao;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setDescricao(String descricao) {
+        Descricao = descricao;
     }
 
-    public String getRaca() {
-        return raca;
+    public String getCategoria() {
+        return Categoria;
     }
 
-    public void setRaca(String raca) {
-        this.raca = raca;
+    public void setCategoria(String categoria) {
+        Categoria = categoria;
     }
 
+    public filmes(String titulo, int imagem, String descricao, String categoria) {
+        Titulo = titulo;
+        Imagem = imagem;
+        Descricao = descricao;
+        Categoria = categoria;
+
+
+    }
 }
